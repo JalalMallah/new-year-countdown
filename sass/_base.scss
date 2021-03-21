@@ -1,0 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: $main-font;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
