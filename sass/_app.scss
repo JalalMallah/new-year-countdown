@@ -4,6 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
   height: 100vh;
   margin: 0;
   background-image: url('../img/newyear.jpg');
@@ -33,7 +34,7 @@ body {
 
 .title {
   margin: -50px 0 30px;
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 .countdown {
@@ -43,15 +44,15 @@ body {
 }
 
 .time {
-  margin: 0 20px;
+  margin: 0 10px;
 
   h2 {
     margin: 0 0 5px;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   small {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
   }
 }
@@ -67,4 +68,61 @@ body {
   opacity: 0.2;
   font-size: 15rem;
   line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .title {
+    margin: -60px 0 30px;
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin: -100px 0 30px;
+    font-size: 5rem;
+  }
+
+  .time {
+    margin: 0 15px;
+
+    h2 {
+      margin: 0 0 5px;
+      font-size: 4rem;
+    }
+
+    small {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .year {
+    font-size: 15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    margin: -50px 0 30px;
+    font-size: 8rem;
+  }
+
+  .time {
+    margin: 0 20px;
+
+    h2 {
+      margin: 0 0 5px;
+      font-size: 5rem;
+    }
+
+    small {
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+  }
+
+  .year {
+    font-size: 20rem;
+  }
 }
