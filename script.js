@@ -11,10 +11,13 @@ const nextYear = new Date().getFullYear() + 1;
 const newYearTime = new Date(`January 01 ${nextYear} 00:00:00`);
 
 window.addEventListener('DOMContentLoaded', () => {
+  updateCssWithCalculatedVh();
   updateCountdown();
   setInterval(updateCountdown, 1000);
   updateYear();
 });
+
+window.addEventListener('resize', debounce(updateCssWithCalculatedVh, 100, true));
 
 function updateCountdown() {
   const currentTime = new Date();
@@ -33,4 +36,25 @@ function updateCountdown() {
 
 function updateYear() {
   year.textContent = nextYear;
+}
+
+function updateCssWithCalculatedVh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+function debounce(callback, wait, immediate = false) {
+  let timeout = null;
+
+  return function () {
+    const callNow = immediate && !timeout;
+    const next = () => callback.apply(this, arguments);
+
+    clearTimeout(timeout);
+    timeout = setTimeout(next, wait);
+
+    if (callNow) {
+      next();
+    }
+  };
 }
