@@ -1,4 +1,4 @@
-body {
+.countdown {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,32 +32,7 @@ body {
   }
 }
 
-.title {
-  margin: -50px 0 30px;
-  font-size: 3rem;
-}
-
-.countdown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.time {
-  margin: 0 10px;
-
-  h2 {
-    margin: 0 0 5px;
-    font-size: 3rem;
-  }
-
-  small {
-    font-size: 1.8rem;
-    font-weight: 500;
-  }
-}
-
-.year {
+.countdown__year {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -70,20 +45,77 @@ body {
   line-height: 1;
 }
 
+.countdown__title {
+  margin: -50px 0 30px;
+  font-size: 2.8rem;
+}
+
+.countdown__data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.countdown__time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin: 10px;
+
+  h2 {
+    flex-basis: 50%;
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  small {
+    flex-basis: 50%;
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
 @media (min-width: 640px) {
-  .title {
+  .countdown__title {
     margin: -60px 0 30px;
     font-size: 4rem;
+  }
+
+  .countdown__data-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .countdown__time {
+    display: block;
+    width: auto;
+    margin: 0 10px;
+
+    h2 {
+      margin: 0 0 5px;
+      font-size: 3rem;
+    }
+
+    small {
+      margin-left: 0;
+      font-size: 2rem;
+      font-weight: 500;
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .title {
+  .countdown__title {
     margin: -100px 0 30px;
     font-size: 5rem;
   }
 
-  .time {
+  .countdown__time {
     margin: 0 15px;
 
     h2 {
@@ -103,12 +135,12 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .title {
+  .countdown__title {
     margin: -50px 0 30px;
     font-size: 8rem;
   }
 
-  .time {
+  .countdown__time {
     margin: 0 20px;
 
     h2 {
@@ -122,7 +154,7 @@ body {
     }
   }
 
-  .year {
+  .countdown__year {
     font-size: 20rem;
   }
 }

@@ -1,11 +1,10 @@
 const $ = document.querySelector.bind(document);
 
-const year = $('.year');
+const year = $('.countdown__year');
 const days = $('.days');
 const hours = $('.hours');
 const minutes = $('.minutes');
 const seconds = $('.seconds');
-const countdown = $('.countdown');
 
 const nextYear = new Date().getFullYear() + 1;
 
