@@ -13,10 +13,10 @@
 
 ### Mobile View Illustration
 
-![cover](./screenshots/mobile.png)
+<img src="./screenshots/mobile.png" alt="Mobile View Illustration" width="300"/>
 
 ---
 
 ### Desktop View Illustration
 
-![cover](./screenshots/desktop.png)
+<img src="./screenshots/desktop.png" alt="Desktop View Illustration"/>
